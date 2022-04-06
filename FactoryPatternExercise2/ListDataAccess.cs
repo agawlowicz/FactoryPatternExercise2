@@ -6,15 +6,13 @@ namespace FactoryPatternExercise2
     {
         public ListDataAccess()
         {
+            Console.WriteLine("Accessing the list...\n");
         }
 
         public static List<Product> products = new List<Product>()
         {
-            new Product()
-            { Name = "gum", Price = 1.00 },
-
-            new Product()
-            { Name = "pepsi", Price = 2.50 }
+            new Product() { Name = "gum", Price = 1.00 },
+            new Product() { Name = "pepsi", Price = 2.50 }
 
         };
 
@@ -27,7 +25,7 @@ namespace FactoryPatternExercise2
 
         public List<Product> LoadData()
         {
-            Console.WriteLine("I am reading from list.");
+            Console.WriteLine("I am reading from list.\n");
             return products;
         }
     }

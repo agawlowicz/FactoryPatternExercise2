@@ -7,15 +7,14 @@ namespace FactoryPatternExercise2
     {
         public MongoDataAccess()
         {
+            Console.WriteLine("Accessing the Mongo database...\n");
         }
 
         public static List<Product> products = new List<Product>()
         {
-            new Product()
-            { Name = "ice cream", Price = 4.00 },
+            new Product() { Name = "ice cream", Price = 4.00 },
 
-            new Product()
-            { Name = "soap", Price = 1.50 }
+            new Product() { Name = "soap", Price = 1.50 }
 
         };
 
@@ -26,7 +25,7 @@ namespace FactoryPatternExercise2
 
         public List<Product> LoadData()
         {
-            Console.WriteLine("I am reading data from Mongo database.");
+            Console.WriteLine("I am reading data from Mongo database.\n");
             return products;
         }
     }

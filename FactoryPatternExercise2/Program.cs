@@ -10,12 +10,15 @@ namespace FactoryPatternExercise2
             Console.WriteLine("Which one of the following databases would you like to use: list, SQL, Mango");
             var databaseUserInput = Console.ReadLine();
 
+            //database = new object determined from user input
             IDataAccess database = DataAccessFactory.GetDataAccessType(databaseUserInput);
 
+            //assigned returned list of products type Products from LoadData method
             List<Product> products = database.LoadData();
+
             foreach(var product in products)
             {
-                Console.WriteLine($"Product Name: {product.Name}.\nProduct Price: {product.Price}.\n");
+                Console.WriteLine($"Product Name: {product.Name}\nProduct Price: {product.Price}\n");
             }
 
             database.SaveData();

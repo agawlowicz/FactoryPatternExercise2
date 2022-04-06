@@ -6,27 +6,26 @@ namespace FactoryPatternExercise2
     {
         public SQLDataAccess()
         {
+            Console.WriteLine("Accessing the SQL database...\n");
         }
 
         public static List<Product> products = new List<Product>()
         {
-            new Product()
-            { Name = "chips", Price = 2.00 },
+            new Product() { Name = "chips", Price = 2.00 },
 
-            new Product()
-            { Name = "chapstick", Price = 2.75 }
+            new Product() { Name = "chapstick", Price = 2.75 }
 
         };
 
         public List<Product> LoadData()
         {
             Console.WriteLine("I am reading data from SQL database.");
-            return products;
+            return products; //or Program.products;
         }
 
         public void SaveData()
         {
-            Console.WriteLine("I am saving data from SQL database.");
+            Console.WriteLine("I am saving data from SQL database.\n");
         }
 
     }
